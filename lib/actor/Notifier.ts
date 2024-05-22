@@ -1,7 +1,7 @@
-import Seat from '../model/Seat';
+import Seat from '../model/Seat.ts';
 import fetch from 'node-fetch';
-import Config from '../Config';
-import Schedule from '../model/Schedule';
+import Config from '../Config.ts';
+import Schedule from '../model/Schedule.ts';
 
 type NotifyParams = {
   schedule: Schedule;
@@ -31,7 +31,7 @@ export default class Notifier {
   }
 
   private async postToSlack(text: string) {
-    await fetch(this.config.slackWebhookUrl, {
+    await fetch(this.config.webhookUrl, {
       method: 'POST',
       headers: {'content-type': 'application/json'},
       body: JSON.stringify({text}),

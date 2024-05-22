@@ -1,7 +1,7 @@
-import Seat from './Seat';
-import {format} from 'date-fns';
-import BaseModel from './BaseModel';
-import PerfRepository from '../actor/PerfRepository';
+import Seat from './Seat.ts';
+import {format} from "date-fns";
+import BaseModel from './BaseModel.ts';
+import PerfRepository from '../actor/PerfRepository.ts';
 
 export default class Schedule extends BaseModel {
   date: Date;

@@ -1,9 +1,9 @@
 import {program} from 'commander';
 
 const options = program
-  .requiredOption('--product-id <number>', '멜론티켓 상품 ID')
-  .option('--schedule-no <number>', '공연 시간 ID')
-  .requiredOption('--slack-webhook-url <string>', '슬랙으로 메시지를 보낼 웹 훅 URL')
+  .requiredOption('--product-id <number>', '209736')
+  .option('--schedule-no <number>', '100001')
+  .requiredOption('--webhook-url <string>', 'https://hooks.slack.com/services/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')
   .option('--poll-interval-millis <number>', '폴링 간격(밀리초)', '500');
 
 export default class Config {
@@ -12,7 +12,7 @@ export default class Config {
   readonly productId: number;
   readonly scheduleNo?: number;
 
-  readonly slackWebhookUrl: string;
+  readonly webhookUrl: string;
   readonly pollIntervalMillis: number;
 
   static parseCommandLineArguments() {
@@ -25,7 +25,7 @@ export default class Config {
     return this.of({
       productId: parseInt(opts.productId),
       scheduleNo: opts.scheduleNo != null ? parseInt(opts.scheduleNo) : undefined,
-      slackWebhookUrl: opts.slackWebhookUrl,
+      webhookUrl: opts.webhookUrl,
       pollIntervalMillis: parseInt(opts.pollIntervalMillis),
     });
   }

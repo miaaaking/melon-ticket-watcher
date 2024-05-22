@@ -1,6 +1,6 @@
-import Seat from '../model/Seat';
-import Section from '../model/Section';
-import SectionParser from './SectionParser';
+import Seat from '../model/Seat.ts';
+import Section from '../model/Section.ts';
+import SectionParser from './SectionParser.ts';
 
 export default class SeatMapParser {
   constructor(private readonly rawSeatMap: any) {}
@@ -8,7 +8,7 @@ export default class SeatMapParser {
   allSeats(): Seat[] {
     const sections = new SectionParser(this.rawSeatMap).allSections();
 
-    return this.rawSeatMap.seatData.st
+    return this.rawSeatMap.seatIdxData.st
       .flatMap((el: any) => el.ss)
       .map((raw: any) => this.buildSeat(raw, sections))
       .filter((s: Seat) => s.valid);

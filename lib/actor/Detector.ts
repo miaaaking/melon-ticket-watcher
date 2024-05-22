@@ -1,5 +1,5 @@
-import Schedule from '../model/Schedule';
-import Seat from '../model/Seat';
+import Schedule from '../model/Schedule.ts';
+import Seat from '../model/Seat.ts';
 
 export default class Detector {
   constructor(

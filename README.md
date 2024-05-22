@@ -9,9 +9,5 @@ $ npm install
 ```
 
 ```bash
-$ npm start -- \
---product-id [멜론티켓 상품 ID] \
---schedule-no [(optional)공연 시간 ID]
---slack-webhook-url [알림 받을 슬랙 웹훅 URL] \
---poll-interval-millis [폴링 주기 밀리초]
+$ npm start --product-id 209736 --schedule-no 100001 --webhook-url 'https://hooks.slack.com/services/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' --poll-interval-millis 100
 ```

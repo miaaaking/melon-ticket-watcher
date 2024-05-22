@@ -1,13 +1,13 @@
-import Section from '../model/Section';
-import SectionPropertyConfig from '../model/SectionPropertyConfig';
+import Section from '../model/Section.ts';
+import SectionPropertyConfig from '../model/SectionPropertyConfig.ts';
 
 export default class SectionParser {
   constructor(private readonly rawSeatMap: any) {}
 
   allSections(): Section[] {
-    const propConfig = SectionPropertyConfig.fromRawJsonSntField(this.rawSeatMap.seatData.snt);
+    const propConfig = SectionPropertyConfig.fromRawJsonSntField(this.rawSeatMap.seatIdxData.snt);
 
-    return this.rawSeatMap.seatData.da.sb.map((sb: any) => this.buildSection(sb, propConfig));
+    return this.rawSeatMap.seatIdxData.da.sb.map((sb: any) => this.buildSection(sb, propConfig));
   }
 
   /**

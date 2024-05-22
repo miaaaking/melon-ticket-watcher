@@ -1,8 +1,8 @@
-import Config from '../Config';
-import Detector from './Detector';
-import Notifier from './Notifier';
-import Schedule from '../model/Schedule';
-import PerfRepository from './PerfRepository';
+import Config from '../Config.ts';
+import Detector from './Detector.ts';
+import Notifier from './Notifier.ts';
+import Schedule from '../model/Schedule.ts';
+import PerfRepository from './PerfRepository.ts';
 
 export default class Worker {
   constructor(

@@ -1,4 +1,4 @@
-import BaseModel from './BaseModel';
+import BaseModel from './BaseModel.ts';
 
 /**
  * 이 좌석 맵에서 사용할 구역의 속성들을 나타냅니다.

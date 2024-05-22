@@ -1,8 +1,8 @@
-import Schedule from '../model/Schedule';
-import Fetcher from './Fetcher';
-import Seat from '../model/Seat';
-import ScheduleParser from './ScheduleParser';
-import SeatMapParser from './SeatMapParser';
+import Schedule from '../model/Schedule.ts';
+import Fetcher from './Fetcher.ts';
+import Seat from '../model/Seat.ts';
+import ScheduleParser from './ScheduleParser.ts';
+import SeatMapParser from './SeatMapParser.ts';
 
 export default class PerfRepository {
   constructor(private readonly fetcher: Fetcher) {}

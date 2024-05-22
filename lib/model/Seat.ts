@@ -1,4 +1,4 @@
-import BaseModel from './BaseModel';
+import BaseModel from './BaseModel.ts';
 
 /**
  * 좌석을 나타냅니다.
